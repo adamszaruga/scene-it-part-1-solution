@@ -1,10 +1,10 @@
 $(function(){
 
-	function renderMovies(moviesArray) {
+	function renderMovies(movieArray) {
 
 		var finalHTML = "";
 
-		moviesArray.forEach(function(currentMovie){
+		movieArray.forEach(function(currentMovie){
 
 			finalHTML += '<div class="card" style="width: 20rem;">';
 			finalHTML += '<img class="card-img-top" src="'+ currentMovie.Poster +'"/>';
@@ -23,7 +23,7 @@ $(function(){
 	$('form').submit(function(e){
 		e.preventDefault();
 		var movieHTML = renderMovies(movieData);
-		$('.movie-container').html(movieHTML);
+		$('.movies-container').html(movieHTML);
 	});
 
 
